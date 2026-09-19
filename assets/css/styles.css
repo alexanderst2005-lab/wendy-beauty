@@ -90,6 +90,17 @@ body {
   font-family: var(--font-sans);
 }
 
+/* High-Quality Logo Rendering */
+img[alt*="Logo"], img[alt*="logo"], img[alt*="WG Cosmetóloga"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: bicubic;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+
 /* Rose & Gold Gradient Text */
 .text-rose-gradient {
   background: linear-gradient(135deg, #D94B83 0%, #B83768 100%);
