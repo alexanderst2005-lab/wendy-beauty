@@ -1,0 +1,434 @@
+/* ==========================================================================
+   WG COSMETÓLOGA ESTETICISTA - PALETA LUXURY FEMENINA Y ELEGANTE
+   Fondo: Crema #FFF9FA | Rosa: #D94B83 | Rosa Suave: #F8DDE8
+   Dorado: #C9A24A | Texto: #2B2528 | Blanco: #FFFFFF
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #FFF9FA;
+  --bg-alt: #FFFFFF;
+  --bg-surface: #FDF2F6;
+  --bg-card: #FFFFFF;
+  
+  --pink-primary: #D94B83;
+  --pink-hover: #C23B70;
+  --pink-soft: #F8DDE8;
+  --pink-light: #FDF0F5;
+  
+  --gold-accent: #C9A24A;
+  --gold-light: #F2E4C4;
+  --gold-dark: #A48030;
+  --gold-gradient: linear-gradient(135deg, #D94B83 0%, #C23B70 100%);
+  
+  --text-main: #2B2528;
+  --text-muted: #6E6468;
+  --text-pink: #D94B83;
+  --text-gold: #B38C35;
+  
+  --border-pink: #F3D5E2;
+  --border-gold: rgba(201, 162, 74, 0.35);
+  --border-gold-hover: rgba(201, 162, 74, 0.7);
+  
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --shadow-soft: 0 10px 30px rgba(217, 75, 131, 0.07);
+  --shadow-hover: 0 15px 35px rgba(217, 75, 131, 0.14);
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(217, 75, 131, 0.03) 0%, transparent 45%),
+    radial-gradient(circle at 90% 60%, rgba(201, 162, 74, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 50% 95%, rgba(248, 221, 232, 0.3) 0%, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #F8DDE8;
+  border-radius: 4px;
+  border: 1px solid #D94B83;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D94B83;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #F8DDE8;
+  color: #D94B83;
+}
+
+/* Fonts */
+.font-serif {
+  font-family: var(--font-serif);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Rose & Gold Gradient Text */
+.text-rose-gradient {
+  background: linear-gradient(135deg, #D94B83 0%, #B83768 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold-accent {
+  color: #C9A24A;
+}
+
+/* Luxury Soft Cards */
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--border-pink);
+  box-shadow: var(--shadow-soft);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  border-color: #D94B83;
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Primary Pink Button (#D94B83 con texto blanco) */
+.btn-gold, .btn-pink {
+  background: #D94B83;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(217, 75, 131, 0.28);
+  transition: all 0.3s ease;
+}
+
+.btn-gold::before, .btn-pink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: 0.6s;
+}
+
+.btn-gold:hover::before, .btn-pink:hover::before {
+  left: 100%;
+}
+
+.btn-gold:hover, .btn-pink:hover {
+  background: #C23B70;
+  box-shadow: 0 6px 25px rgba(217, 75, 131, 0.4);
+  transform: translateY(-2px);
+  color: #FFFFFF !important;
+}
+
+.btn-gold:active, .btn-pink:active {
+  transform: translateY(0);
+}
+
+/* Outline Elegant Button */
+.btn-outline-gold, .btn-outline-pink {
+  background: #FFFFFF;
+  color: #D94B83;
+  border: 1.5px solid #D94B83;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(217, 75, 131, 0.08);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover, .btn-outline-pink:hover {
+  background: #F8DDE8;
+  color: #C23B70;
+  border-color: #C23B70;
+  box-shadow: 0 4px 15px rgba(217, 75, 131, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Shimmer Animation for Badges */
+.badge-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* Service Card Image Hover Zoom */
+.service-img-container {
+  overflow: hidden;
+}
+
+.service-img-container img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-card:hover .service-img-container img {
+  transform: scale(1.06);
+}
+
+/* Before & After Interactive Slider */
+.ba-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  touch-action: none;
+  border-radius: var(--radius-lg);
+  border: 2px solid #F8DDE8;
+  box-shadow: var(--shadow-soft);
+}
+
+.ba-image-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #D94B83;
+  box-shadow: 0 0 10px rgba(217, 75, 131, 0.6);
+  cursor: ew-resize;
+}
+
+.ba-handle-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #D94B83;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D94B83;
+  box-shadow: 0 4px 15px rgba(217, 75, 131, 0.3);
+}
+
+@media (max-width: 640px) {
+  .ba-handle-circle {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.wa-floating-btn {
+  animation: wa-pulse 2.2s infinite;
+}
+
+/* Modal Animations */
+.modal-enter {
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-content-enter {
+  animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hero Glow Soft Pink & Warm Cream */
+.hero-glow {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(248, 221, 232, 0.6) 0%, rgba(201, 162, 74, 0.08) 40%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gold Accent Details & Frame */
+.gold-frame {
+  border: 1px solid rgba(201, 162, 74, 0.4);
+  box-shadow: inset 0 0 15px rgba(201, 162, 74, 0.08);
+}
+
+/* Lightbox Modal */
+.lightbox-container {
+  transition: opacity 0.3s ease;
+}
+
+/* Testimonials Marquee Slider */
+@keyframes scrollReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonials-track {
+  display: flex;
+  width: max-content;
+  animation: scrollReviews 30s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-slider-wrapper:hover .testimonials-track {
+  animation-play-state: paused;
+}
+
+/* ==========================================================================
+   Top Marquee Banner (Fondo Rosa #D94B83, Texto Blanco y Dorado)
+   ♡ BIENESTAR · CALIDAD · CONFIANZA · BELLEZA · CUIDADO PERSONAL ♡
+   ========================================================================== */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.top-marquee-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+  overflow: hidden;
+  background: #D94B83;
+  border-bottom: 1px solid rgba(201, 162, 74, 0.5);
+  box-shadow: 0 2px 10px rgba(217, 75, 131, 0.25);
+  padding: 8px 0;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.top-marquee-banner:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.marquee-heart {
+  color: #FFF2D6;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin: 0 0.4rem;
+}
+
+.marquee-gold-text {
+  color: #FFF2D6;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .marquee-item {
+    font-size: 0.75rem;
+    gap: 0.9rem;
+    padding: 0 0.85rem;
+    letter-spacing: 0.15em;
+  }
+  .top-marquee-banner {
+    padding: 6px 0;
+  }
+}
